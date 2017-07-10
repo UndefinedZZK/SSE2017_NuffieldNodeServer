@@ -16,6 +16,30 @@ app.post('/query', function(request, response) {
     console.log("I'm here from post");
 });
 
+app.post('/sendmessage', function(request, response) {
+	if(response.statusCode == 200) {
+        //console.log("[Nuffield_Debugger]: Now enter sendmessage method");
+		console.log(request.body);
+		response.send("Message received: " + request.body + " Response code: " + response.statusCode);
+		response.end();
+    } 
+    else {
+    	response.send("Error code: " + response.statusCode);
+    }
+});
+
+app.post("/deleteObs", function(request, response) {
+    if(response.statusCode == 200) {
+        console.log("[Nuffield_Debugger]: Now enter deleteObs method");
+    	console.log(request.body); 
+        response.send("Message received: " + request.body + " Response code: " + response.statusCode);
+        response.end();
+    }
+    else {
+        response.send(" Error code: " + response.statusCode);
+    }
+});
+
 var server = http.createServer(app);
 server.listen(port);
 
