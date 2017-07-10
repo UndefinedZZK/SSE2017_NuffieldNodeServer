@@ -19,11 +19,13 @@ app.post('/query', function(request, response) {
 app.post('/sendmessage', function(request, response) {
     console.log("[Nuffield_Debugger]: Now enter sendmessage method");
     if(response.statusCode == 200) {
+        console.log("[Nuffield_Debugger]: Sendmessage seems working");
 	    console.log(request.body);
 	    response.send("Message received: " + request.body + " Response code: " + response.statusCode);
 	    response.end();
     } 
     else {
+        console.log("[Nuffield_Debugger]: Sendmessage seems not working");
         response.send("Error code: " + response.statusCode);
     }
 });
