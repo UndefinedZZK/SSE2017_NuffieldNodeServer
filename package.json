@@ -1,0 +1,11 @@
+{
+    "name": "SSE2017_NuffieldNodeServer",
+    "description": "This is SSE2017 Nuffield team's NodeJS server.",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "~4.0.0"
+    }
+}
