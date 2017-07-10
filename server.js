@@ -2,7 +2,11 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
+var bodyParser = require('body-parser');
 app.set('port', port);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/query', function(request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
