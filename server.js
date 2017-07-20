@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/query', function(request, response) {
-    response.end("Hello World Nuffield Team! (get method) changed");
+    response.json({"foo": "bar"});
     console.log("I'm here from get");
 });
 
