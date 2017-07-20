@@ -9,8 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/query', function(request, response) {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World Nuffield Team! (get method)");
+    response.end("Hello World Nuffield Team! (get method) changed");
     console.log("I'm here from get");
 });
 
